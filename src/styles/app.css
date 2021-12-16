@@ -1,0 +1,18 @@
+.inline {
+    display: flex;
+}
+
+.profile {
+    width: 300px;
+    height: 500px;
+    border: solid 1px;
+    padding: 10px;
+}
+
+ul.list li {
+    margin: 10px
+}
+
+ul.list li span {
+    padding: 5px
+}

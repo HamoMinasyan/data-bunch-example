@@ -1,31 +1,19 @@
-import DataBunch from "../../dataBunch";
-import {
-    PROFILE,
-    USERS,
-    CARS_LIST,
-    ADD_USER,
-    DELETE_USER,
-    USER_INFO
-} from "../constants";
+import DataBunch from "data-bunch";
+import { PROFILE, CARS_LIST } from "../constants";
+
 // DATA BUNCHES STARTS FROM THIS FILE !
 
+const initialValues = {
+    [PROFILE]: {},
+    [CARS_LIST]: [],
+    // ...
+};
 
-// fetched data bunch
+const watcher = (allData = {}) => {
+    console.info("dataBunch", allData);
+}
+
 export const dataBunch = new DataBunch({
-    watcher: allData => console.info(allData),
-    initialValues: {
-        [PROFILE]: {},
-        [USERS]: [],
-        [CARS_LIST]: []
-    },
-});
-
-
-// modal types bunch
-export const modalTypesBunch = new DataBunch({
-    initialValues: {
-        [ADD_USER]: false,
-        [DELETE_USER]: false,
-        [USER_INFO]: false
-    }
+    initialValues,
+    watcher
 });
